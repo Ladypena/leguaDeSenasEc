@@ -1,0 +1,2 @@
+# leguaDeSenasEc
+Copyright ©
