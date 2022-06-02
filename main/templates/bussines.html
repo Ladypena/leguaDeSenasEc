@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <video muted id="video" autoplay width='1000'></video>
+      <div class="btn-group" role="group" aria-label="startstopbtn">
+        <button type="button" id="startbtn" class="btn btn-success btn-lg">Start Recording</button>
+        {% comment %} <button type="button" id="stopbtn" class="btn btn-danger btn-lg">Stop Recording</button> {% endcomment %}
+      </div>
+      <!-- <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nombre del Usuario</label>
+          <input
+            type="text"
+            class="form-control"
+            value="{{request.user.first_name}}"
+            name="first_name"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form> -->
+    </div>
+  </div>
+</div>
+{% endblock%}
+{% block extra_scripts %}
+<script src="{% static 'assets/js/custom-script.js' %}"></script>
+
+{% endblock %}
